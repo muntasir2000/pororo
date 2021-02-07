@@ -32,6 +32,7 @@ class BrainWav2Vec2Recognizer(object):
         ],
         "en": None,
         "zh": None,
+        "bn": None,
     }
 
     def __init__(

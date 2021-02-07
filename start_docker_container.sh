@@ -1,0 +1,1 @@
+docker run -it -v /2hdd/temp/models:/models -v .:/app po bash

@@ -70,3 +70,9 @@ WORKDIR /app/external_lib/wav2letter/bindings/python
 RUN pip install -e .
 
 WORKDIR /app
+
+RUN pip uninstall pororo
+
+# INSTALL PORORO
+RUN pip install -e .
+
