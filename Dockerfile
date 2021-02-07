@@ -34,7 +34,8 @@ RUN pip install --upgrade pip
 RUN pip install python-mecab-ko==1.0.9
 
 # 3. install pororo
-RUN pip install pororo
+COPY . /app
+RUN pip install -e .
 
 # 4. install brainspeech
 RUN pip install soundfile \
@@ -69,12 +70,12 @@ RUN git clone -b v0.2 https://github.com/facebookresearch/wav2letter.git
 WORKDIR /app/external_lib/wav2letter/bindings/python
 RUN pip install -e .
 
-COPY . /app
+
 
 WORKDIR /app
 
-RUN pip uninstall -y pororo
+#RUN pip uninstall -y pororo
 
 # INSTALL PORORO
-RUN pip install -e .
+
 
