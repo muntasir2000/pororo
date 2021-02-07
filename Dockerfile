@@ -69,6 +69,8 @@ RUN git clone -b v0.2 https://github.com/facebookresearch/wav2letter.git
 WORKDIR /app/external_lib/wav2letter/bindings/python
 RUN pip install -e .
 
+COPY . /app
+
 WORKDIR /app
 
 RUN pip uninstall -y pororo
