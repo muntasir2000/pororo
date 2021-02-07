@@ -71,7 +71,7 @@ RUN pip install -e .
 
 WORKDIR /app
 
-RUN pip uninstall pororo
+RUN pip uninstall -y pororo
 
 # INSTALL PORORO
 RUN pip install -e .
