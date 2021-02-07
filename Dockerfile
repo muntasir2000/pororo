@@ -34,7 +34,9 @@ RUN pip install --upgrade pip
 RUN pip install python-mecab-ko==1.0.9
 
 # 3. install pororo
-COPY . /app
+COPY . /workspace
+WORKDIR /workspace
+
 RUN pip install -e .
 
 # 4. install brainspeech
